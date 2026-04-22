@@ -13,6 +13,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import QuizPage from './pages/QuizPage';
 import Wallet from './pages/Wallet';
 import LandingPage from './pages/LandingPage';
+import Profile from './pages/Profile';
 import { useContext, useState, useEffect } from 'react';
 import { AuthContext } from './context/AuthContext';
 import { Toaster } from 'react-hot-toast';
@@ -49,6 +50,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/note/:id/quiz" element={<QuizPage />} />
+            <Route path="/profile" element={<Profile />} />
           </Route>
 
           <Route element={<AdminRoute />}>

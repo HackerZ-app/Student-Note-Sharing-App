@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { ThemeContext } from '../context/ThemeContext';
-import { BookOpen, LogOut, Upload as UploadIcon, User, Shield, Sun, Moon, Wallet as WalletIcon } from 'lucide-react';
+import { BookOpen, LogOut, Upload as UploadIcon, User, Shield, Sun, Moon, Wallet as WalletIcon, Settings } from 'lucide-react';
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
@@ -62,6 +62,9 @@ const Navbar = () => {
                   </Link>
                   <Link to="/wallet" className="flex items-center text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition-colors">
                     <WalletIcon className="h-4 w-4 mr-1" /> Wallet
+                  </Link>
+                  <Link to="/profile" className="flex items-center text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition-colors">
+                    <Settings className="h-4 w-4 mr-1" /> Profile
                   </Link>
                   <button 
                     onClick={handleLogout}
